@@ -1,0 +1,92 @@
+:root {
+  --wiiu-blue: #00b2ff;
+  --wiiu-cyan: #52e3ff;
+  --wiiu-bg: #f4fbff;
+  --panel: #ffffff;
+  --text: #15324a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #e8f8ff, #d2ecff 45%, #b4ddff 100%);
+}
+
+.launcher-shell {
+  width: min(900px, 94vw);
+  border-radius: 28px;
+  background: linear-gradient(170deg, #ffffff 0%, var(--wiiu-bg) 100%);
+  border: 2px solid #8ddcff;
+  box-shadow: 0 20px 35px rgba(0, 98, 152, 0.22);
+  overflow: hidden;
+}
+
+.launcher-header {
+  padding: 24px 28px 16px;
+  border-bottom: 1px solid #b8e9ff;
+}
+
+.launcher-header h1 {
+  margin: 0;
+  color: #0091d6;
+}
+
+.launcher-header p {
+  margin: 6px 0 0;
+  opacity: 0.8;
+}
+
+.channel-grid {
+  padding: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.channel {
+  border: 2px solid #8fddff;
+  border-radius: 16px;
+  background: var(--panel);
+  min-height: 120px;
+  padding: 16px;
+  display: grid;
+  gap: 8px;
+  align-content: center;
+  justify-items: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.channel:hover,
+.channel:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 146, 214, 0.18);
+  background: linear-gradient(180deg, #ffffff, #ebfaff);
+}
+
+.channel__icon {
+  font-size: 2rem;
+}
+
+.channel__label {
+  font-weight: 600;
+}
+
+.launcher-footer {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  border-top: 1px solid #b8e9ff;
+  background: linear-gradient(180deg, #f8fdff, #edfaff);
+  font-weight: 600;
+  color: #0a6c9f;
+}

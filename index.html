@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wii U Launcher</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="launcher-shell" aria-label="Wii U themed launcher">
+      <header class="launcher-header">
+        <h1>Wii U Launcher</h1>
+        <p>Choose a channel to start</p>
+      </header>
+
+      <section class="channel-grid" aria-label="Launcher channels">
+        <button class="channel" data-channel="Mii Maker">
+          <span class="channel__icon">😀</span>
+          <span class="channel__label">Mii Maker</span>
+        </button>
+        <button class="channel" data-channel="Internet Browser">
+          <span class="channel__icon">🌐</span>
+          <span class="channel__label">Browser</span>
+        </button>
+        <button class="channel" data-channel="eShop">
+          <span class="channel__icon">🛍️</span>
+          <span class="channel__label">eShop</span>
+        </button>
+        <button class="channel" data-channel="Settings">
+          <span class="channel__icon">⚙️</span>
+          <span class="channel__label">Settings</span>
+        </button>
+      </section>
+
+      <footer class="launcher-footer">
+        <span id="status">Ready</span>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
